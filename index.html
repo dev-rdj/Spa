@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Samikshya💕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-pink': '#FF69B4',
+                        'secondary-teal': '#00A99D',
+                        'dark-green': '#1E5631',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body {
+            background: #000;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div id="landing-page" class="flex flex-col items-center justify-center min-h-screen w-screen bg-black text-white p-6 transition-opacity duration-1000">
+        <div class="text-center space-y-8">
+            <div class="relative">
+                <h1 class="text-8xl md:text-9xl font-extrabold text-primary-pink tracking-widest leading-none animate-pulse"
+                    style="text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4;">
+                    TIKKI
+                </h1>
+                <div class="absolute -inset-4 bg-primary-pink blur-3xl opacity-20 -z-10 animate-pulse"></div>
+            </div>
+            
+            <p class="text-2xl md:text-4xl text-white italic font-light animate-bounce">
+                For you my long distance bestie 💕
+            </p>
+            
+            <div class="relative">
+                <button id="open-button" 
+                        class="mt-12 px-10 py-4 text-2xl font-bold bg-primary-pink text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group">
+                    Open Here
+                    <span class="ml-3 text-3xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">💝</span>
+                </button>
+                <div class="absolute -inset-4 bg-primary-pink rounded-full blur-xl opacity-20 -z-10 group-hover:opacity-30 transition-opacity"></div>
+            </div>
+            
+            <p class="text-sm text-gray-400 mt-8 animate-pulse">
+                Click the button for surprise Gift ✨
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('open-button').addEventListener('click', function() {
+            const landingPage = document.getElementById('landing-page');
+            const button = this;
+            
+            // Disable button during transition
+            button.disabled = true;
+            button.innerHTML = 'Creating Magic... <span class="ml-3 animate-spin">🌸</span>';
+            button.classList.remove('hover:scale-105');
+            
+            // Add multiple effects
+            landingPage.style.opacity = '0';
+            landingPage.style.transform = 'scale(0.9)';
+            landingPage.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
+            
+            // Create sparkle effect
+            for(let i = 0; i < 20; i++) {
+                createSparkle();
+            }
+            
+            // Redirect after animation
+            setTimeout(() => {
+                window.location.href = 'garden.html';
+            }, 1200);
+        });
+        
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            const size = Math.random() * 10 + 5;
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            
+            sparkle.style.cssText = `
+                position: fixed;
+                width: ${size}px;
+                height: ${size}px;
+                background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+                border-radius: 50%;
+                left: ${x}px;
+                top: ${y}px;
+                pointer-events: none;
+                z-index: 10000;
+                animation: sparkleFloat 1.2s ease-out forwards;
+                filter: blur(1px);
+                box-shadow: 0 0 20px #FF69B4;
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes sparkleFloat {
+                    0% {
+                        transform: scale(1) rotate(0deg);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(0) rotate(180deg) translateY(-100px);
+                        opacity: 0;
+                    }
+                }
+            `;
+            
+            document.head.appendChild(style);
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+                style.remove();
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

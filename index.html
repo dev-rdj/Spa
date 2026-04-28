@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Swarna ✨</title>
+    <title>My Pasandida Aurat✨</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;700&display=swap');
@@ -17,36 +17,35 @@
             overflow: hidden; perspective: 1000px; transition: opacity 2s ease;
         }
 
-        /* ===== LANDING PAGE ===== */
-        #landing-page { z-index: 50; background: #000; align-items: center; }
+        /* ===== SCENE 1: LANDING PAGE ===== */
+        #landing-page { z-index: 50; background: #000; align-items: center; justify-content: center; }
         .text-primary-pink { color: #FF69B4; }
 
-        /* ===== GARDEN PAGE ===== */
+        /* ===== SCENE 2: GARDEN PAGE ===== */
         #garden-page { z-index: 20; opacity: 0; pointer-events: none; }
-        
-        /* Night Background */
         .night { position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 100vw; height: 100vh; filter: blur(0.1vmin); background-image: radial-gradient(ellipse at top, transparent 0%, #000), radial-gradient(ellipse at bottom, #000, rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240)); z-index: 1; }
 
         /* Poetry Overlay */
         #poetry-overlay {
-            position: absolute; top: 15%; left: 50%; transform: translateX(-50%);
-            width: 90%; max-width: 800px; text-align: center; z-index: 100;
+            position: absolute; top: 12%; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 900px; text-align: center; z-index: 100;
         }
         #poetry-text {
-            font-family: 'Dancing Script', cursive; font-size: 3rem; color: #a7ffee;
-            text-shadow: 0 0 20px rgba(167, 255, 238, 0.8), 0 0 40px #FF69B4;
+            font-family: 'Dancing Script', cursive; font-size: 3rem; color: #fbd786;
+            text-shadow: 0 0 15px rgba(251, 215, 134, 0.6), 0 0 30px #FF69B4;
             opacity: 0; transition: opacity 1.5s ease-in-out;
         }
 
         /* Galaxy Button */
         #universe-btn {
-            position: absolute; top: 20px; right: 20px; z-index: 100; padding: 10px 25px;
-            background: rgba(20, 117, 122, 0.5); border: 1px solid #39c6d6; color: #a7ffee;
-            border-radius: 20px; cursor: pointer; transition: 0.3s; display: none;
+            position: absolute; top: 20px; right: 20px; z-index: 100; padding: 12px 28px;
+            background: rgba(251, 215, 134, 0.1); border: 1px solid #fbd786; color: #fbd786;
+            border-radius: 30px; cursor: pointer; transition: 0.3s; display: none; backdrop-filter: blur(5px);
+            font-family: 'Inter', sans-serif; font-size: 1rem;
         }
-        #universe-btn:hover { background: rgba(39, 167, 172, 0.9); transform: scale(1.05); }
+        #universe-btn:hover { background: #fbd786; color: #000; box-shadow: 0 0 20px #fbd786; transform: scale(1.05); }
 
-        /* ===== FLOWERS CSS (From your original file) ===== */
+        /* ===== FLOWERS CSS ===== */
         .flowers { position: relative; transform: scale(0.9); z-index: 10; }
         .flower { position: absolute; bottom: 10vmin; transform-origin: bottom center; z-index: 10; --fl-speed: 0.8s; }
         .flower--1 { animation: moving-flower-1 4s linear infinite; }
@@ -80,7 +79,7 @@
         .flower__leaf--3 { transform: translate(-90%, 0%) rotateY(45deg) rotateX(50deg); }
         .flower__leaf--4 { width: 8vmin; height: 8vmin; transform-origin: bottom left; border-radius: 4vmin 10vmin 4vmin 4vmin; transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg); background-image: linear-gradient(to top, #39c6d6, #a7ffee); z-index: 1; opacity: 0.8; }
         .flower__white-circle { position: absolute; left: -3.5vmin; top: -3vmin; width: 9vmin; height: 4vmin; border-radius: 50%; background-color: #fff; }
-        .flower__white-circle::after { content: ""; position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%); width: 60%; height: 60%; border-radius: inherit; background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, rgb(255, 235, 18), rgb(255, 206, 0)); }
+        .flower__white-circle::after { content: ""; position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%); width: 60%; height: 60%; border-radius: inherit; background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, rgb(255, 235, 18), rgb(255, 206, 0)); }
         .flower__line { height: 55vmin; width: 1.5vmin; background-image: linear-gradient(to left, rgba(0,0,0,0.2), transparent, rgba(255,255,255,0.2)), linear-gradient(to top, transparent 10%, #14757a, #39c6d6); box-shadow: inset 0 0 2px rgba(0,0,0,0.5); animation: grow-flower-tree 4s backwards; }
         .flower__line__leaf { --w: 7vmin; --h: calc(var(--w) + 2vmin); position: absolute; top: 20%; left: 90%; width: var(--w); height: var(--h); border-top-right-radius: var(--h); border-bottom-left-radius: var(--h); background-image: linear-gradient(to top, rgba(20, 117, 122, 0.4), #39c6d6); }
         .flower__line__leaf--1 { transform: rotate(70deg) rotateY(30deg); }
@@ -116,17 +115,15 @@
         @keyframes grow-flower-tree { 0% { height: 0; border-radius: 1vmin; } }
         @keyframes blooming-flower { 0% { transform: scale(0); } }
 
-        /* ===== GALAXY PAGE ===== */
+        /* ===== SCENE 3: GALAXY PAGE ===== */
         #galaxy-page {
-            z-index: 30; opacity: 0; pointer-events: none; align-items: center; background: radial-gradient(circle at center, #1b0033 0%, #000 100%);
+            z-index: 30; opacity: 0; pointer-events: none; align-items: center; background: radial-gradient(circle at center, #1b0033 0%, #000000 100%);
         }
         .star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle infinite ease-in-out alternate; }
         @keyframes twinkle { 0% { opacity: 0.2; } 100% { opacity: 1; box-shadow: 0 0 5px #fff; } }
-
         .final-message { text-align: center; z-index: 40; padding: 30px; max-width: 900px; }
-        .final-message h1 { font-family: 'Dancing Script', cursive; font-size: 4.5rem; color: #ff9a9e; margin-bottom: 20px; text-shadow: 0 0 20px #ff9a9e; }
-        .final-message p { font-size: 1.5rem; line-height: 1.8; color: #e0e0e0; }
-
+        .final-message h1 { font-family: 'Dancing Script', cursive; font-size: 5rem; color: #ff9a9e; margin-bottom: 20px; text-shadow: 0 0 20px #ff9a9e; }
+        .final-message p { font-family: 'Inter', sans-serif; font-size: 1.5rem; line-height: 1.8; color: #e0e0e0; font-weight: 300; }
     </style>
 </head>
 <body>
@@ -137,9 +134,9 @@
 
     <div id="landing-page" class="scene flex flex-col transition-opacity duration-1000">
         <div class="text-center space-y-8">
-            <h1 class="text-7xl font-extrabold text-primary-pink tracking-widest animate-pulse" style="text-shadow: 0 0 20px #ff69b4;">TIKKI</h1>
-            <p class="text-3xl italic font-light animate-bounce">For Swarna, my pasandida aurat ✨</p>
-            <button id="start-btn" class="mt-12 px-10 py-4 text-2xl font-bold bg-primary-pink text-white rounded-full shadow-lg hover:scale-105 transition-all">
+            <h1 class="text-8xl md:text-9xl font-extrabold text-primary-pink tracking-widest animate-pulse" style="text-shadow: 0 0 20px #ff69b4;">SWARNA</h1>
+            <p class="text-3xl italic font-light animate-bounce">My pasandida aurat ✨</p>
+            <button id="start-btn" class="mt-12 px-12 py-5 text-2xl font-bold bg-primary-pink text-white rounded-full shadow-lg hover:scale-105 transition-all">
                 Open Here 🌸
             </button>
         </div>
@@ -147,13 +144,9 @@
 
     <div id="garden-page" class="scene">
         <div class="night"></div>
-        
         <button id="universe-btn">Show me the universe 🌌</button>
-
-        <div id="poetry-overlay">
-            <div id="poetry-text"></div>
-        </div>
-
+        <div id="poetry-overlay"><div id="poetry-text"></div></div>
+        
         <div class="flowers">
             <div class="flower flower--1">
                 <div class="flower__leafs flower__leafs--1"><div class="flower__leaf flower__leaf--1"></div><div class="flower__leaf flower__leaf--2"></div><div class="flower__leaf flower__leaf--3"></div><div class="flower__leaf flower__leaf--4"></div><div class="flower__white-circle"></div></div>
@@ -230,8 +223,8 @@
         let poemIndex = 0;
         let poetryInterval;
 
-        // 1. Generate Galaxy Stars Early
-        for(let i=0; i<150; i++) {
+        // Generate Stars for the Galaxy
+        for(let i=0; i<200; i++) {
             let star = document.createElement('div');
             star.className = 'star';
             star.style.left = Math.random() * 100 + 'vw';
@@ -243,45 +236,55 @@
             starsContainer.appendChild(star);
         }
 
-        // 2. Start Button Logic
+        // START BUTTON CLICK: Plays Music & Transitions to Garden
         startBtn.addEventListener('click', () => {
-            // Play Music
-            bgMusic.play().catch(() => console.log("Add song.mp3 to folder!"));
-            
-            // Hide Landing, Show Garden
+            // Force music to play instantly on click
+            let playPromise = bgMusic.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Audio couldn't play automatically. Please check the file name.", error);
+                    alert("Audio file not found! Make sure your song is named exactly 'song.mp3' (without adding extra .mp3) and is in the same folder.");
+                });
+            }
+
+            // Fade out Landing Page
             landingPage.style.opacity = '0';
+            
             setTimeout(() => {
                 landingPage.style.display = 'none';
+                
+                // Fade in Garden Page
                 gardenPage.style.opacity = '1';
                 gardenPage.style.pointerEvents = 'all';
                 
-                // Show Universe button after 5 seconds so she enjoys the garden first
-                setTimeout(() => { universeBtn.style.display = 'block'; }, 5000);
-
-                // Start Poetry Cycle
+                // Show the "Show me the universe" button after 6 seconds
+                setTimeout(() => { universeBtn.style.display = 'block'; }, 6000);
+                
+                // Start the Poetry loop
                 poetryText.innerText = poems[0];
                 poetryText.style.opacity = '1';
                 
                 poetryInterval = setInterval(() => {
-                    poetryText.style.opacity = '0'; // Fade out
+                    poetryText.style.opacity = '0';
                     setTimeout(() => {
                         poemIndex = (poemIndex + 1) % poems.length;
                         poetryText.innerText = poems[poemIndex];
-                        poetryText.style.opacity = '1'; // Fade in
+                        poetryText.style.opacity = '1';
                     }, 1500);
-                }, 5000); // Change text every 5 seconds
+                }, 5000); // Changes poem every 5 seconds
                 
             }, 1000);
         });
 
-        // 3. To Galaxy Logic
+        // UNIVERSE BUTTON CLICK: Transitions to Galaxy
         universeBtn.addEventListener('click', () => {
-            clearInterval(poetryInterval);
-            gardenPage.style.opacity = '0';
-            gardenPage.style.pointerEvents = 'none';
+            clearInterval(poetryInterval); // Stop poetry
+            gardenPage.style.opacity = '0'; // Fade out garden
             
             setTimeout(() => {
                 gardenPage.style.display = 'none';
+                
+                // Fade in Galaxy
                 galaxyPage.style.opacity = '1';
                 galaxyPage.style.pointerEvents = 'all';
             }, 2000);

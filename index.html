@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Pasandida Aurat✨</title>
+    <title>My Pasandida Aurat ✨</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;700&display=swap');
@@ -27,23 +27,32 @@
 
         /* Poetry Overlay */
         #poetry-overlay {
-            position: absolute; top: 12%; left: 50%; transform: translateX(-50%);
+            position: absolute; top: 15%; left: 50%; transform: translateX(-50%);
             width: 90%; max-width: 900px; text-align: center; z-index: 100;
         }
         #poetry-text {
-            font-family: 'Dancing Script', cursive; font-size: 3rem; color: #fbd786;
+            font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: #fbd786;
             text-shadow: 0 0 15px rgba(251, 215, 134, 0.6), 0 0 30px #FF69B4;
             opacity: 0; transition: opacity 1.5s ease-in-out;
         }
 
-        /* Galaxy Button */
+        /* Galaxy Button - Now Centered! */
         #universe-btn {
-            position: absolute; top: 20px; right: 20px; z-index: 100; padding: 12px 28px;
-            background: rgba(251, 215, 134, 0.1); border: 1px solid #fbd786; color: #fbd786;
-            border-radius: 30px; cursor: pointer; transition: 0.3s; display: none; backdrop-filter: blur(5px);
-            font-family: 'Inter', sans-serif; font-size: 1rem;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            z-index: 200; padding: 15px 40px; background: rgba(251, 215, 134, 0.1); 
+            border: 2px solid #fbd786; color: #fbd786; border-radius: 30px; 
+            cursor: pointer; transition: 0.3s; display: none; opacity: 0; backdrop-filter: blur(5px);
+            font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: bold;
         }
-        #universe-btn:hover { background: #fbd786; color: #000; box-shadow: 0 0 20px #fbd786; transform: scale(1.05); }
+        #universe-btn:hover { background: #fbd786; color: #000; box-shadow: 0 0 30px #fbd786; transform: translate(-50%, -50%) scale(1.05); }
+
+        /* Music Toggle Button */
+        #music-toggle {
+            position: absolute; bottom: 20px; right: 20px; z-index: 1000;
+            background: none; border: none; font-size: 2rem; cursor: pointer;
+            opacity: 0.5; transition: 0.3s; display: none;
+        }
+        #music-toggle:hover { opacity: 1; transform: scale(1.1); }
 
         /* ===== FLOWERS CSS ===== */
         .flowers { position: relative; transform: scale(0.9); z-index: 10; }
@@ -131,13 +140,14 @@
     <audio id="bg-music" loop>
         <source src="song.mp3" type="audio/mpeg">
     </audio>
+    <button id="music-toggle">🎵</button>
 
     <div id="landing-page" class="scene flex flex-col transition-opacity duration-1000">
         <div class="text-center space-y-8">
             <h1 class="text-8xl md:text-9xl font-extrabold text-primary-pink tracking-widest animate-pulse" style="text-shadow: 0 0 20px #ff69b4;">SWARNA</h1>
             <p class="text-3xl italic font-light animate-bounce">My pasandida aurat ✨</p>
             <button id="start-btn" class="mt-12 px-12 py-5 text-2xl font-bold bg-primary-pink text-white rounded-full shadow-lg hover:scale-105 transition-all">
-                Open Here 🌸
+                Isko Click Karo Jaan🌸
             </button>
         </div>
     </div>
@@ -218,10 +228,12 @@
         const poetryText = document.getElementById('poetry-text');
         const universeBtn = document.getElementById('universe-btn');
         const bgMusic = document.getElementById('bg-music');
+        const musicToggle = document.getElementById('music-toggle');
         const starsContainer = document.getElementById('stars-container');
 
         let poemIndex = 0;
         let poetryInterval;
+        let isMusicPlaying = false;
 
         // Generate Stars for the Galaxy
         for(let i=0; i<200; i++) {
@@ -236,16 +248,30 @@
             starsContainer.appendChild(star);
         }
 
+        // Music Toggle Failsafe Button
+        musicToggle.addEventListener('click', () => {
+            if(isMusicPlaying) {
+                bgMusic.pause();
+                musicToggle.innerText = '🔇';
+            } else {
+                bgMusic.play();
+                musicToggle.innerText = '🎵';
+            }
+            isMusicPlaying = !isMusicPlaying;
+        });
+
         // START BUTTON CLICK: Plays Music & Transitions to Garden
         startBtn.addEventListener('click', () => {
             // Force music to play instantly on click
-            let playPromise = bgMusic.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log("Audio couldn't play automatically. Please check the file name.", error);
-                    alert("Audio file not found! Make sure your song is named exactly 'song.mp3' (without adding extra .mp3) and is in the same folder.");
-                });
-            }
+            bgMusic.play().then(() => {
+                isMusicPlaying = true;
+                musicToggle.innerText = '🎵';
+            }).catch(error => {
+                console.log("Audio blocked or not found.", error);
+            });
+            
+            // Show the failsafe music toggle button
+            musicToggle.style.display = 'block';
 
             // Fade out Landing Page
             landingPage.style.opacity = '0';
@@ -257,32 +283,45 @@
                 gardenPage.style.opacity = '1';
                 gardenPage.style.pointerEvents = 'all';
                 
-                // Show the "Show me the universe" button after 6 seconds
-                setTimeout(() => { universeBtn.style.display = 'block'; }, 6000);
-                
                 // Start the Poetry loop
                 poetryText.innerText = poems[0];
                 poetryText.style.opacity = '1';
                 
                 poetryInterval = setInterval(() => {
-                    poetryText.style.opacity = '0';
+                    poetryText.style.opacity = '0'; // Fade out
+                    
                     setTimeout(() => {
-                        poemIndex = (poemIndex + 1) % poems.length;
-                        poetryText.innerText = poems[poemIndex];
-                        poetryText.style.opacity = '1';
-                    }, 1500);
-                }, 5000); // Changes poem every 5 seconds
+                        poemIndex++;
+                        
+                        // Check if we reached the last poem
+                        if(poemIndex < poems.length) {
+                            poetryText.innerText = poems[poemIndex];
+                            poetryText.style.opacity = '1'; // Fade in next poem
+                        } else {
+                            // POETRY IS FINISHED
+                            clearInterval(poetryInterval);
+                            
+                            // Show Universe Button in the exact center
+                            universeBtn.style.display = 'block';
+                            setTimeout(() => {
+                                universeBtn.style.opacity = '1';
+                            }, 100);
+                        }
+                    }, 1500); // Waits for fade-out before switching text
+                    
+                }, 4500); // 4.5 seconds per poem so the flow is nice and steady
                 
             }, 1000);
         });
 
         // UNIVERSE BUTTON CLICK: Transitions to Galaxy
         universeBtn.addEventListener('click', () => {
-            clearInterval(poetryInterval); // Stop poetry
             gardenPage.style.opacity = '0'; // Fade out garden
+            musicToggle.style.opacity = '0'; // Hide music toggle to clean screen
             
             setTimeout(() => {
                 gardenPage.style.display = 'none';
+                musicToggle.style.display = 'none';
                 
                 // Fade in Galaxy
                 galaxyPage.style.opacity = '1';

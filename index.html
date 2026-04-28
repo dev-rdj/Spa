@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Swarna ✨</title>
-    
+    <title>For Samikshya💕</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,28 +21,14 @@
             }
         }
     </script>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        
         body {
             background: #000;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
         }
-
-        /* ----- PASTE YOUR ENTIRE style.css CONTENT BELOW THIS LINE ----- */
-        
-        
-
-
-
-        /* ----- PASTE YOUR ENTIRE style.css CONTENT ABOVE THIS LINE ----- */
     </style>
 </head>
-<body class="font-sans not-loaded">
-
+<body class="font-sans">
     <div id="landing-page" class="flex flex-col items-center justify-center min-h-screen w-screen bg-black text-white p-6 transition-opacity duration-1000">
         <div class="text-center space-y-8">
             <div class="relative">
@@ -55,205 +40,32 @@
             </div>
             
             <p class="text-2xl md:text-4xl text-white italic font-light animate-bounce">
-                For Swarna, my pasandida aurat ✨
+                For you my long distance bestie 💕
             </p>
             
             <div class="relative">
                 <button id="open-button" 
                         class="mt-12 px-10 py-4 text-2xl font-bold bg-primary-pink text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group">
                     Open Here
-                    <span class="ml-3 text-3xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">🌸</span>
+                    <span class="ml-3 text-3xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">💝</span>
                 </button>
                 <div class="absolute -inset-4 bg-primary-pink rounded-full blur-xl opacity-20 -z-10 group-hover:opacity-30 transition-opacity"></div>
             </div>
             
             <p class="text-sm text-gray-400 mt-8 animate-pulse">
-                Click the button for surprise Gift 🎁
+                Click the button for surprise Gift ✨
             </p>
         </div>
     </div>
 
-    <div id="garden-page" style="display: none;">
-        
-        <div class="loading" id="loadingScreen">
-            <div class="loader"></div>
-            <div class="loading-text">Loading Magical Garden for Swarna, my pasandida aurat💕...</div>
-            <div class="loading-subtext">愛してる...Tsuki ga kirei desu</div>
-            <div class="loading-progress">
-                <div class="progress-bar"></div>
-            </div>
-        </div>
-        
-        <div class="controls">
-            <button class="control-btn" onclick="pauseAnimations()">⏸️ Pause</button>
-            <button class="control-btn" onclick="resumeAnimations()">▶️ Resume</button>
-            <button class="control-btn" onclick="resetAnimations()">🔄 Reset</button>
-            <button class="control-btn" onclick="toggleLights()">💡 Lights</button>
-            <button class="control-btn" id="musicToggle">🎵 Play</button>
-            <button class="control-btn" onclick="returnToHome()">🏠 Home</button>
-        </div>
-        
-        <audio id="backgroundMusic" loop preload="auto">
-            <source src="backgroundMusic/background-music.mp3" type="audio/mpeg">
-            <source src="backgroundMusic/background-music.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
-        </audio>
-        
-        <div class="night"></div>
-        
-        <div class="flowers">
-            <div class="flower flower--1">
-                <div class="flower__leafs flower__leafs--1">
-                    <div class="flower__leaf flower__leaf--1"></div>
-                    <div class="flower__leaf flower__leaf--2"></div>
-                    <div class="flower__leaf flower__leaf--3"></div>
-                    <div class="flower__leaf flower__leaf--4"></div>
-                    <div class="flower__white-circle"></div>
-
-                    <div class="flower__light flower__light--1"></div>
-                    <div class="flower__light flower__light--2"></div>
-                    <div class="flower__light flower__light--3"></div>
-                    <div class="flower__light flower__light--4"></div>
-                    <div class="flower__light flower__light--5"></div>
-                    <div class="flower__light flower__light--6"></div>
-                    <div class="flower__light flower__light--7"></div>
-                    <div class="flower__light flower__light--8"></div>
-                </div>
-                <div class="flower__line">
-                    <div class="flower__line__leaf flower__line__leaf--1"></div>
-                    <div class="flower__line__leaf flower__line__leaf--2"></div>
-                    <div class="flower__line__leaf flower__line__leaf--3"></div>
-                    <div class="flower__line__leaf flower__line__leaf--4"></div>
-                    <div class="flower__line__leaf flower__line__leaf--5"></div>
-                    <div class="flower__line__leaf flower__line__leaf--6"></div>
-                </div>
-            </div>
-
-            <div class="flower flower--2">
-                <div class="flower__leafs flower__leafs--2">
-                    <div class="flower__leaf flower__leaf--1"></div>
-                    <div class="flower__leaf flower__leaf--2"></div>
-                    <div class="flower__leaf flower__leaf--3"></div>
-                    <div class="flower__leaf flower__leaf--4"></div>
-                    <div class="flower__white-circle"></div>
-
-                    <div class="flower__light flower__light--1"></div>
-                    <div class="flower__light flower__light--2"></div>
-                    <div class="flower__light flower__light--3"></div>
-                    <div class="flower__light flower__light--4"></div>
-                    <div class="flower__light flower__light--5"></div>
-                    <div class="flower__light flower__light--6"></div>
-                    <div class="flower__light flower__light--7"></div>
-                    <div class="flower__light flower__light--8"></div>
-                </div>
-                <div class="flower__line">
-                    <div class="flower__line__leaf flower__line__leaf--1"></div>
-                    <div class="flower__line__leaf flower__line__leaf--2"></div>
-                    <div class="flower__line__leaf flower__line__leaf--3"></div>
-                    <div class="flower__line__leaf flower__line__leaf--4"></div>
-                </div>
-            </div>
-
-            <div class="flower flower--3">
-                <div class="flower__leafs flower__leafs--3">
-                    <div class="flower__leaf flower__leaf--1"></div>
-                    <div class="flower__leaf flower__leaf--2"></div>
-                    <div class="flower__leaf flower__leaf--3"></div>
-                    <div class="flower__leaf flower__leaf--4"></div>
-                    <div class="flower__white-circle"></div>
-
-                    <div class="flower__light flower__light--1"></div>
-                    <div class="flower__light flower__light--2"></div>
-                    <div class="flower__light flower__light--3"></div>
-                    <div class="flower__light flower__light--4"></div>
-                    <div class="flower__light flower__light--5"></div>
-                    <div class="flower__light flower__light--6"></div>
-                    <div class="flower__light flower__light--7"></div>
-                    <div class="flower__light flower__light--8"></div>
-                </div>
-                <div class="flower__line">
-                    <div class="flower__line__leaf flower__line__leaf--1"></div>
-                    <div class="flower__line__leaf flower__line__leaf--2"></div>
-                    <div class="flower__line__leaf flower__line__leaf--3"></div>
-                    <div class="flower__line__leaf flower__line__leaf--4"></div>
-                </div>
-            </div>
-
-            <div class="long-g long-g--1">
-                <div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--0"></div></div>
-                <div class="grow-ans" style="--d:3.8s"><div class="leaf leaf--1"></div></div>
-                <div class="grow-ans" style="--d:4s"><div class="leaf leaf--2"></div></div>
-                <div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--3"></div></div>
-            </div>
-
-            <div class="long-g long-g--2">
-                <div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div>
-                <div class="grow-ans" style="--d:4.4s"><div class="leaf leaf--2"></div></div>
-                <div class="grow-ans" style="--d:4.6s"><div class="leaf leaf--3"></div></div>
-            </div>
-
-            <div class="long-g long-g--3">
-                <div class="grow-ans" style="--d:4s"><div class="leaf leaf--0"></div></div>
-                <div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div>
-                <div class="grow-ans" style="--d:3s"><div class="leaf leaf--2"></div></div>
-                <div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div>
-            </div>
-
-            <div class="long-g long-g--4">
-                <div class="grow-ans" style="--d:4s"><div class="leaf leaf--0"></div></div>
-                <div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div>
-                <div class="grow-ans" style="--d:3s"><div class="leaf leaf--2"></div></div>
-                <div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div>
-            </div>
-
-            <div class="long-g long-g--5">
-                <div class="grow-ans" style="--d:4s"><div class="leaf leaf--0"></div></div>
-                <div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div>
-                <div class="grow-ans" style="--d:3s"><div class="leaf leaf--2"></div></div>
-                <div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div>
-            </div>
-
-            <div class="long-g long-g--6">
-                <div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--0"></div></div>
-                <div class="grow-ans" style="--d:4.4s"><div class="leaf leaf--1"></div></div>
-                <div class="grow-ans" style="--d:4.6s"><div class="leaf leaf--2"></div></div>
-                <div class="grow-ans" style="--d:4.8s"><div class="leaf leaf--3"></div></div>
-            </div>
-
-            <div class="long-g long-g--7">
-                <div class="grow-ans" style="--d:3s"><div class="leaf leaf--0"></div></div>
-                <div class="grow-ans" style="--d:3.2s"><div class="leaf leaf--1"></div></div>
-                <div class="grow-ans" style="--d:3.5s"><div class="leaf leaf--2"></div></div>
-                <div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div>
-            </div>
-
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-            <div class="particle particle-4"></div>
-            <div class="particle particle-5"></div>
-
-            <div class="firefly firefly-1"></div>
-            <div class="firefly firefly-2"></div>
-            <div class="firefly firefly-3"></div>
-            <div class="firefly firefly-4"></div>
-            <div class="firefly firefly-5"></div>
-            
-            <div class="floating-hearts"></div>
-        </div>
-    </div>
-
     <script>
-        // ==========================================
-        // 1. LANDING PAGE LOGIC & TRANSITION
-        // ==========================================
         document.getElementById('open-button').addEventListener('click', function() {
             const landingPage = document.getElementById('landing-page');
             const button = this;
             
             // Disable button during transition
             button.disabled = true;
-            button.innerHTML = 'Creating Magic... <span class="ml-3 animate-spin">✨</span>';
+            button.innerHTML = 'Creating Magic... <span class="ml-3 animate-spin">🌸</span>';
             button.classList.remove('hover:scale-105');
             
             // Add multiple effects
@@ -263,19 +75,16 @@
             
             // Create sparkle effect
             for(let i = 0; i < 20; i++) {
-                createLandingSparkle();
+                createSparkle();
             }
             
-            // Switch UI after animation
+            // Redirect after animation
             setTimeout(() => {
-                landingPage.style.display = 'none';
-                document.getElementById('garden-page').style.display = 'block';
-                // Start the garden loading sequence
-                simulateLoading();
+                window.location.href = 'garden.html';
             }, 1200);
         });
         
-        function createLandingSparkle() {
+        function createSparkle() {
             const sparkle = document.createElement('div');
             const size = Math.random() * 10 + 5;
             const x = Math.random() * window.innerWidth;
@@ -299,8 +108,14 @@
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes sparkleFloat {
-                    0% { transform: scale(1) rotate(0deg); opacity: 1; }
-                    100% { transform: scale(0) rotate(180deg) translateY(-100px); opacity: 0; }
+                    0% {
+                        transform: scale(1) rotate(0deg);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(0) rotate(180deg) translateY(-100px);
+                        opacity: 0;
+                    }
                 }
             `;
             
@@ -312,470 +127,6 @@
                 style.remove();
             }, 1200);
         }
-
-        // Return Home Logic
-        function returnToHome() {
-            document.getElementById('garden-page').style.display = 'none';
-            const landingPage = document.getElementById('landing-page');
-            
-            landingPage.style.display = 'flex';
-            // Force reflow
-            void landingPage.offsetWidth; 
-            
-            landingPage.style.opacity = '1';
-            landingPage.style.transform = 'scale(1)';
-            
-            const btn = document.getElementById('open-button');
-            btn.disabled = false;
-            btn.innerHTML = 'Open Here <span class="ml-3 text-3xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">🌸</span>';
-            btn.classList.add('hover:scale-105');
-            
-            document.body.classList.add("not-loaded");
-            
-            // Show loading screen again for next entry
-            const loadingScreen = document.getElementById('loadingScreen');
-            loadingScreen.style.display = 'flex';
-            loadingScreen.classList.remove('hidden');
-            document.querySelector('.progress-bar').style.width = '0%';
-            
-            pauseMusic();
-        }
-
-        // ==========================================
-        // 2. GARDEN LOGIC (from garden.js)
-        // ==========================================
-        let isAnimationsPaused = false;
-        let isMusicPlaying = false;
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // We NO LONGER trigger simulateLoading() here! 
-            // It runs when the landing page button is clicked instead.
-            initializeMusicPlayer();
-            initializeInteractiveEffects();
-            initializeKeyboardShortcuts();
-        });
-
-        function simulateLoading() {
-            const loadingScreen = document.getElementById('loadingScreen');
-            const progressBar = document.querySelector('.progress-bar');
-            
-            let progress = 0;
-            const interval = setInterval(() => {
-                progress += Math.random() * 20;
-                if (progress > 100) progress = 100;
-                progressBar.style.width = progress + '%';
-                
-                if (progress >= 100) {
-                    clearInterval(interval);
-                    setTimeout(() => {
-                        loadingScreen.classList.add('hidden');
-                        setTimeout(() => {
-                            loadingScreen.style.display = 'none';
-                            document.body.classList.remove("not-loaded");
-                            createSparkleBurst();
-                            
-                            // Trigger welcome message if it exists in another script
-                            if(typeof showWelcomeMessage === 'function') {
-                                setTimeout(showWelcomeMessage, 3000);
-                            }
-                        }, 500);
-                    }, 500);
-                }
-            }, 100);
-        }
-
-        function initializeMusicPlayer() {
-            const audio = document.getElementById('backgroundMusic');
-            const toggleBtn = document.getElementById('musicToggle');
-            
-            audio.volume = 0.5;
-            
-            toggleBtn.addEventListener('click', function() {
-                if (audio.paused) {
-                    playMusic();
-                } else {
-                    pauseMusic();
-                }
-            });
-            
-            document.addEventListener('click', function initAudio() {
-                // Ensure garden page is visible before trying to auto-play
-                if (document.getElementById('garden-page').style.display !== 'none' && !isMusicPlaying && audio.paused) {
-                    audio.volume = 0.3;
-                    audio.play().then(() => {
-                        isMusicPlaying = true;
-                        updateMusicButton();
-                        showNotification("🎵 Music Started");
-                    }).catch(() => {
-                        showNotification("Click music button to enable audio");
-                    });
-                }
-                // Don't remove listener immediately, let it retry on next click if blocked
-            });
-        }
-
-        function updateMusicButton() {
-            const toggleBtn = document.getElementById('musicToggle');
-            const audio = document.getElementById('backgroundMusic');
-            
-            if (audio.paused) {
-                toggleBtn.textContent = '🎵 Play';
-                toggleBtn.setAttribute('aria-pressed', 'false');
-            } else {
-                toggleBtn.textContent = '⏸️ Pause';
-                toggleBtn.setAttribute('aria-pressed', 'true');
-            }
-        }
-
-        function playMusic() {
-            const audio = document.getElementById('backgroundMusic');
-            audio.play().then(() => {
-                isMusicPlaying = true;
-                updateMusicButton();
-                showNotification("🎵 Music Playing");
-            }).catch(error => {
-                showNotification("🔊 Tap music button to enable audio");
-            });
-        }
-
-        function pauseMusic() {
-            const audio = document.getElementById('backgroundMusic');
-            audio.pause();
-            isMusicPlaying = false;
-            updateMusicButton();
-            showNotification("⏸️ Music Paused");
-        }
-
-        function pauseAnimations() {
-            document.body.classList.add("not-loaded");
-            isAnimationsPaused = true;
-            showNotification("Animations Paused ⏸️");
-        }
-
-        function resumeAnimations() {
-            document.body.classList.remove("not-loaded");
-            isAnimationsPaused = false;
-            showNotification("Animations Resumed ▶️");
-        }
-
-        function resetAnimations() {
-            pauseAnimations();
-            void document.body.offsetWidth; // Force reflow
-            setTimeout(() => {
-                resumeAnimations();
-                showNotification("Garden Reset! 🌸");
-                createSparkleBurst();
-            }, 100);
-        }
-
-        function toggleLights() {
-            const lights = document.querySelectorAll('.flower__light, .firefly');
-            if(lights.length === 0) return;
-            const isVisible = lights[0].style.opacity !== '0';
-            
-            lights.forEach(light => {
-                if (isVisible) {
-                    light.style.opacity = '0';
-                    light.style.animationPlayState = 'paused';
-                } else {
-                    light.style.opacity = '';
-                    light.style.animationPlayState = 'running';
-                }
-            });
-            showNotification(isVisible ? "Lights Off 🌙" : "Lights On ✨");
-        }
-
-        function growRandomGrass() {
-            const grassColors = ['#159faa', '#1aaa15', '#0d8c07', '#2bc925', '#098f85', '#0cba5c'];
-            const randomColor = grassColors[Math.floor(Math.random() * grassColors.length)];
-            const randomLeft = Math.random() * 80 - 40;
-            const randomBottom = 10 + Math.random() * 15;
-            const randomRotate = -30 - Math.random() * 35;
-            const randomScale = 0.7 + Math.random() * 0.7;
-            
-            const newGrass = document.createElement('div');
-            newGrass.className = 'flower__grass grass-extra';
-            newGrass.style.cssText = `
-                --c: ${randomColor};
-                --line-w: 1.5vmin;
-                position: absolute;
-                bottom: ${randomBottom}vmin;
-                left: ${randomLeft}vmin;
-                transform-origin: bottom center;
-                transform: rotate(${randomRotate}deg) rotateY(${30 + Math.random() * 20}deg) scale(${randomScale});
-                animation: moving-grass ${2 + Math.random()}s linear infinite;
-                opacity: 0;
-            `;
-            
-            newGrass.innerHTML = `
-                <div class="flower__grass--top"></div>
-                <div class="flower__grass--bottom"></div>
-                <div class="flower__grass__leaf flower__grass__leaf--1"></div>
-                <div class="flower__grass__leaf flower__grass__leaf--2"></div>
-                <div class="flower__grass__overlay"></div>
-            `;
-            
-            document.querySelector('.flowers').appendChild(newGrass);
-            
-            setTimeout(() => {
-                newGrass.style.transition = 'opacity 1s ease';
-                newGrass.style.opacity = '1';
-                addGrassInteraction(newGrass);
-                for(let i = 0; i < 3; i++) {
-                    createGrassParticle(newGrass);
-                }
-            }, 10);
-            
-            showNotification("🌱 New grass grew!");
-        }
-
-        function addGrassInteraction(grassElement = null) {
-            const grassElements = grassElement ? [grassElement] : document.querySelectorAll('.flower__grass');
-            grassElements.forEach(grass => {
-                grass.removeEventListener('mouseenter', handleGrassHover);
-                grass.removeEventListener('mouseleave', handleGrassLeave);
-                grass.removeEventListener('click', handleGrassClick);
-                
-                grass.addEventListener('mouseenter', handleGrassHover);
-                grass.addEventListener('mouseleave', handleGrassLeave);
-                grass.addEventListener('click', handleGrassClick);
-            });
-            
-            function handleGrassHover(e) {
-                this.style.filter = 'brightness(1.5) drop-shadow(0 0 8px var(--c))';
-                this.style.transition = 'filter 0.3s ease';
-            }
-            function handleGrassLeave(e) {
-                this.style.filter = 'brightness(1)';
-            }
-            function handleGrassClick(e) {
-                e.stopPropagation();
-                for(let i = 0; i < 8; i++) {
-                    createGrassParticle(this);
-                }
-                this.style.animation = 'none';
-                setTimeout(() => {
-                    this.style.animation = '';
-                }, 100);
-                showNotification("🌿 Grass rustles gently");
-            }
-        }
-
-        function createGrassParticle(grassElement) {
-            const rect = grassElement.getBoundingClientRect();
-            const color = getComputedStyle(grassElement).getPropertyValue('--c') || '#159faa';
-            
-            const particle = document.createElement('div');
-            particle.style.cssText = `
-                position: fixed;
-                width: 4px;
-                height: 10px;
-                background: ${color};
-                border-radius: 2px;
-                pointer-events: none;
-                z-index: 999;
-                left: ${rect.left + rect.width/2}px;
-                top: ${rect.top}px;
-                transform-origin: bottom center;
-                animation: grassParticleFloat 2s ease-out forwards;
-            `;
-            
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes grassParticleFloat {
-                    0% { transform: translate(0, 0) rotate(${Math.random() * 30 - 15}deg) scale(1); opacity: 1; }
-                    50% { transform: translate(${Math.random() * 40 - 20}px, -40px) rotate(${Math.random() * 60 - 30}deg) scale(0.7); opacity: 0.6; }
-                    100% { transform: translate(${Math.random() * 60 - 30}px, -80px) rotate(${Math.random() * 90 - 45}deg) scale(0); opacity: 0; }
-                }
-            `;
-            
-            document.head.appendChild(style);
-            document.body.appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-                style.remove();
-            }, 2000);
-        }
-
-        function initializeInteractiveEffects() {
-            document.addEventListener('click', function(e) {
-                if (e.target.classList.contains('control-btn') || 
-                    e.target.classList.contains('music-btn') ||
-                    e.target.classList.contains('close-message') ||
-                    e.target.id === 'open-button') return;
-                
-                createClickSparkles(e.clientX, e.clientY);
-                
-                try {
-                    const clickSound = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAZGF0YQQ=');
-                    clickSound.volume = 0.05;
-                    clickSound.play().catch(() => {});
-                } catch(e) {}
-            });
-            
-            setTimeout(() => {
-                addGrassInteraction();
-            }, 2000);
-        }
-
-        function createClickSparkles(x, y) {
-            for(let i = 0; i < 15; i++) {
-                createGardenSparkle(x, y);
-            }
-        }
-
-        function createGardenSparkle(x, y) {
-            const sparkle = document.createElement('div');
-            const size = Math.random() * 8 + 4;
-            const angle = Math.random() * Math.PI * 2;
-            const distance = Math.random() * 50 + 20;
-            const color = Math.random() > 0.5 ? '#23f0ff' : '#ff69b4';
-            
-            sparkle.style.cssText = `
-                position: fixed;
-                width: ${size}px;
-                height: ${size}px;
-                background: ${color};
-                border-radius: 50%;
-                left: ${x}px;
-                top: ${y}px;
-                pointer-events: none;
-                z-index: 9999;
-                animation: sparkleExplode 1s ease-out forwards;
-                filter: blur(${size/4}px);
-                box-shadow: 0 0 ${size*2}px ${color};
-            `;
-            
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes sparkleExplode {
-                    0% { transform: translate(0, 0) scale(1); opacity: 1; }
-                    100% { transform: translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0); opacity: 0; }
-                }
-            `;
-            
-            document.head.appendChild(style);
-            document.body.appendChild(sparkle);
-            
-            setTimeout(() => {
-                sparkle.remove();
-                style.remove();
-            }, 1000);
-        }
-
-        function createSparkleBurst() {
-            for(let i = 0; i < 30; i++) {
-                setTimeout(() => {
-                    const x = Math.random() * window.innerWidth;
-                    const y = Math.random() * window.innerHeight;
-                    createGardenSparkle(x, y);
-                }, i * 50);
-            }
-        }
-
-        function initializeKeyboardShortcuts() {
-            document.addEventListener('keydown', function(e) {
-                // Only process shortcuts if we're on the garden page
-                if (document.getElementById('garden-page').style.display === 'none') return;
-                
-                switch(e.key.toLowerCase()) {
-                    case ' ':
-                        e.preventDefault();
-                        if (isAnimationsPaused) resumeAnimations();
-                        else pauseAnimations();
-                        break;
-                    case 'r':
-                        resetAnimations();
-                        break;
-                    case 'g':
-                        growRandomGrass();
-                        break;
-                    case 'm':
-                        e.preventDefault();
-                        const audio = document.getElementById('backgroundMusic');
-                        if (audio.paused) playMusic();
-                        else pauseMusic();
-                        break;
-                    case '+':
-                        const volumeUp = document.getElementById('volumeSlider');
-                        if (volumeUp && volumeUp.value < 100) {
-                            volumeUp.value = Math.min(100, parseInt(volumeUp.value) + 10);
-                            volumeUp.dispatchEvent(new Event('input'));
-                        }
-                        break;
-                    case '-':
-                        const volumeDown = document.getElementById('volumeSlider');
-                        if (volumeDown && volumeDown.value > 0) {
-                            volumeDown.value = Math.max(0, parseInt(volumeDown.value) - 10);
-                            volumeDown.dispatchEvent(new Event('input'));
-                        }
-                        break;
-                    case 'escape':
-                        if (confirm("Return to home screen?")) {
-                            returnToHome();
-                        }
-                        break;
-                }
-            });
-        }
-
-        function showNotification(message) {
-            const existingNote = document.querySelector('.notification');
-            if (existingNote) existingNote.remove();
-            
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: rgba(20, 117, 122, 0.95);
-                color: #a7ffee;
-                padding: 15px 25px;
-                border-radius: 15px;
-                z-index: 2500;
-                animation: notificationSlide 0.3s ease, notificationFade 0.3s ease 2.7s;
-                border: 1px solid #39c6d6;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-                max-width: 300px;
-                text-align: center;
-            `;
-            
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes notificationSlide {
-                    from { transform: translateX(100px); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-                @keyframes notificationFade {
-                    from { opacity: 1; }
-                    to { opacity: 0; }
-                }
-            `;
-            
-            document.head.appendChild(style);
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.remove();
-                    style.remove();
-                }
-            }, 3000);
-        }
-
-        window.addEventListener('resize', function() {
-            const flowers = document.querySelector('.flowers');
-            if(flowers) {
-                if (window.innerWidth < 768) {
-                    flowers.style.transform = 'scale(0.7)';
-                } else {
-                    flowers.style.transform = 'scale(0.9)';
-                }
-            }
-        });
     </script>
 </body>
 </html>
